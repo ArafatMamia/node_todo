@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Todo = require('./model/Todo')
+const Todo = require('../model/Todo')
 
 // create a new todo
 router.post('/', async (req,res) => {
@@ -17,7 +17,6 @@ router.post('/', async (req,res) => {
 // Get all todos
 router.get('/', async(req,res) =>{
     try {
-        console.log('from get')
         const todos = await Todo.find()
      // const todos = await Todo.findOne( {title: "Buy groceries"});
     //   const todos = await Todo.findById('67da85bee3dd357458972f51')

@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const connectDB = require('./db'); 
-const todo = require('../routes/PersonRoutes')
+const todo = require('./routes/TodoRoutes')
 require('dotenv').config()
 const app = express();
 app.use(bodyParser.json())
