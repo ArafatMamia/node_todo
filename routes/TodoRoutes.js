@@ -17,6 +17,7 @@ router.post('/', async (req,res) => {
 // Get all todos
 router.get('/', async(req,res) =>{
     try {
+        console.log('from get')
         const todos = await Todo.find()
      // const todos = await Todo.findOne( {title: "Buy groceries"});
     //   const todos = await Todo.findById('67da85bee3dd357458972f51')
@@ -53,4 +54,5 @@ router.delete("/:id", async(req,res) =>{
         res.status(500).json({ error: err.message });
     }
 })
+
 module.exports = router
